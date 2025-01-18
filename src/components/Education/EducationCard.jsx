@@ -5,7 +5,7 @@ const EducationCard = ({ education }) => {
       {/* Top Section with Image and Details */}
       <div className="w-full flex gap-4">
         <img
-          src={`${import.meta.env.BASE_URL}/images/${education.img}`} // Reference to images in the public folder
+          src={`/Portfolio/images/${education.img}`} // Reference to images in the public folder
           alt="School Logo"
           className="h-[40px] bg-black rounded-lg mt-1 md:h-[50px] lg:h-[60px]"
         />

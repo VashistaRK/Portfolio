@@ -25,7 +25,7 @@ const ProjectCards = ({ project }) => {
     >
       {/* Thumbnail Image */}
       <img
-        src={`${import.meta.env.BASE_URL}/images/${project.image}`}
+        src={`/Portfolio/images/${project.image}`}
         alt="Project"
         onClick={() => setIsOpen(true)} // Open modal on image click
         className="w-full h-[180px] bg-lightGray rounded-xl shadow-[0_0_16px_2px_rgba(0,0,0,0.3)] cursor-pointer"
