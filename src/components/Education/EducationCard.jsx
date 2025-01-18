@@ -1,7 +1,7 @@
 /*eslint-disable*/
 const EducationCard = ({ education }) => {
   return (
-    <div className="w-[300px] bg-[rgba(255, 255, 255, 0.1)] p-4 flex flex-col bg-opacity-90 gap-4 rounded-lg shadow-[rgba(23,92,230,0.15)_0px_4px_24px] relative overflow-hidden transition-all duration-300 ease-in-out hover:shadow-[0px_0px_20px_rgba(0,0,0,0.2)] hover:translate-y-[-5px] border-[0.1px] border-[#FF7F50] md:w-[400px] lg:w-[650px] lg:p-6">
+    <div className="w-[270px] bg-[rgba(255, 255, 255, 0.1)] p-4 flex flex-col bg-opacity-90 gap-4 rounded-lg shadow-[rgba(23,92,230,0.15)_0px_4px_24px] relative overflow-hidden transition-all duration-300 ease-in-out hover:shadow-[0px_0px_20px_rgba(0,0,0,0.2)] hover:translate-y-[-5px] border-[0.1px] border-[#FF7F50] md:w-[400px] lg:w-[650px] lg:p-6">
       {/* Top Section with Image and Details */}
       <div className="w-full flex gap-4">
         <img
