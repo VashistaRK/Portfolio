@@ -4,8 +4,46 @@ import Hero from "./components/Hero/Hero";
 import Skills from "./components/Skills/Skill";
 import Projects from "./components/Projects/Projects";
 import Education from "./components/Education/Education";
+import { useEffect } from "react";
 
 const App = () => {
+  useEffect(() => {
+    // Prevent zoom via keyboard
+    const handleKeyDown = (e) => {
+      if (
+        (e.ctrlKey || e.metaKey) &&
+        (e.key === "+" || e.key === "-" || e.key === "=")
+      ) {
+        e.preventDefault();
+      }
+    };
+
+    // Prevent zoom via mouse wheel (Ctrl + scroll)
+    const handleWheel = (e) => {
+      if (e.ctrlKey) {
+        e.preventDefault();
+      }
+    };
+
+    // Prevent zoom via touch (pinch gestures)
+    const handleTouchMove = (e) => {
+      if (e.touches.length > 1) {
+        e.preventDefault();
+      }
+    };
+
+    // Add event listeners
+    document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener("wheel", handleWheel, { passive: false });
+    document.addEventListener("touchmove", handleTouchMove, { passive: false });
+
+    // Cleanup event listeners
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener("wheel", handleWheel);
+      document.removeEventListener("touchmove", handleTouchMove);
+    };
+  }, []);
   return (
     <div className="bg-darkbg w-full h-full overflow-x-hidden">
       {/* <Navbar /> */}
