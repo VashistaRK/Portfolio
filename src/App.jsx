@@ -52,7 +52,7 @@ const App = () => {
       >
         <button
           onClick={toggleTheme}
-          className="bg-primary rounded-full p-2 transition-all flex items-center justify-center absolute top-18 right-4 2xl:top-4"
+          className="bg-primary rounded-full p-2 transition-all flex items-center justify-center absolute top-18 right-4 z-50 2xl:top-4"
         >
           {theme === "dark" ? (
             <SunIcon className="w-6 h-6 text-yellow-200" /> // Sun icon for dark mode
