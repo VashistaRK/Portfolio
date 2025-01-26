@@ -1,6 +1,7 @@
 import { useState } from "react";
 /*eslint-disable*/
-const ProjectCards = ({ project }) => {
+
+const ProjectCards = ({ project, theme }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   if (!project) return null;
@@ -17,11 +18,13 @@ const ProjectCards = ({ project }) => {
 
   return (
     <div
-      className={`w-[330px] h-[460px] bg-cardBackground cursor-pointer rounded-xl shadow-[0_0_12px_4px_rgba(0,0,0,0.4)] overflow-hidden p-[24px_20px] flex flex-col gap-4 transition-all duration-500 ease-in-out ${
+      className={`w-[330px] h-[460px] ${
+        theme === "dark" ? "bg-cardBackground" : "bg-lightcardBackground"
+      } cursor-pointer rounded-xl shadow-[0_0_12px_4px_rgba(0,0,0,0.4)] overflow-hidden p-[24px_20px] flex flex-col gap-4 transition-all duration-500 ease-in-out ${
         isOpen
           ? ""
           : "hover:translate-y-[-10px] hover:shadow-[0_0_50px_4px_rgba(0,0,0,0.6)] hover:brightness-[1.1]"
-      }`} //Conditional Hover Effect:
+      }`} // Conditional Hover Effect:
     >
       {/* Thumbnail Image */}
       <img
@@ -50,11 +53,19 @@ const ProjectCards = ({ project }) => {
       </div>
 
       {/* Title and Description */}
-      <div className="w-full flex flex-col gap-0 px-1 text-textSecondary">
-        <div className="text-lg font-semibold text-textPrimary truncate overflow-hidden line-clamp-2">
+      <div className="w-full flex flex-col gap-0 px-1">
+        <div
+          className={`text-lg font-semibold ${
+            theme === "dark" ? "text-textPrimary" : "text-lighttextPrimary"
+          } truncate overflow-hidden line-clamp-2`}
+        >
           {project.title}
         </div>
-        <div className="text-sm font-normal text-textSecondary99 mt-2 truncate overflow-hidden line-clamp-3">
+        <div
+          className={`text-sm font-normal ${
+            theme === "dark" ? "text-textSecondary" : "text-lighttextSecondary"
+          } mt-2 truncate overflow-hidden line-clamp-3`}
+        >
           {project.description}
         </div>
       </div>
@@ -67,18 +78,34 @@ const ProjectCards = ({ project }) => {
               key={index}
               src={member.img}
               alt="Member"
-              className="w-9 h-9 rounded-full -ml-2.5 bg-lightGray shadow-[0_0_10px_rgba(0,0,0,0.2)] border-2 border-cardBackground"
+              className={`w-9 h-9 rounded-full -ml-2.5 bg-lightGray shadow-[0_0_10px_rgba(0,0,0,0.2)] border-2 ${
+                theme === "dark"
+                  ? "border-cardBackground"
+                  : "border-lightcardBackground"
+              } `}
             />
           ))
         ) : (
-          <span className="text-xs text-textSecondary">No members</span>
+          <span
+            className={`text-xs ${
+              theme === "dark"
+                ? "text-textSecondary"
+                : "text-lighttextSecondary"
+            } `}
+          >
+            No members
+          </span>
         )}
       </div>
 
       {/* View Project Button */}
       <button
         onClick={handleButtonClick}
-        className="w-full py-2 bg-textPrimary text-background text-sm font-bold rounded-xl cursor-pointer transition-all duration-800 ease-in-out"
+        className={`w-full py-2 text-sm font-bold rounded-xl cursor-pointer transition-all duration-800 ease-in-out ${
+          theme === "dark"
+            ? "bg-textPrimary text-background"
+            : "bg-lighttextPrimary text-lightbackground"
+        }`}
       >
         View Project
       </button>

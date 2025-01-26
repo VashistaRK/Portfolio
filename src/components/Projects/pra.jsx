@@ -9,6 +9,12 @@ export const projects = [
     category: "web app",
     github: "#",
     webapp: "#",
+    // members: [
+    //   {
+    //     name: "Vashista Rama Krishna",
+    //     img: "vashista_photo.jpg",
+    //   },
+    // ],
   },
 
   {
@@ -32,6 +38,16 @@ export const projects = [
     category: "web app",
     github: "https://github.com/VashistaRK/Task-Manager",
     webapp: "#",
+    members: [
+      {
+        name: "Vashista Rama Krishna",
+        img: "vashista_photo.jpg",
+      },
+      {
+        name: "Giridhar",
+        img: "giridhar.jpeg",
+      },
+    ],
   },
 
   {

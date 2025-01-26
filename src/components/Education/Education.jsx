@@ -8,8 +8,9 @@ import {
 } from "@mui/lab";
 import { education } from "./constants.jsx";
 import EducationCard from "./EducationCard";
+/*eslint-disable*/
 
-const Index = () => {
+const Index = ({ theme }) => {
   return (
     <div
       id="education"
@@ -18,13 +19,27 @@ const Index = () => {
       <div className="relative flex flex-col items-center justify-between w-full max-w-[1350px] pt-[40px] gap-6">
         {/* Header */}
         <div className="text-center font-semibold mt-5">
-          <h1 className="text-4xl font-extrabold tracking-tight text-textPrimary sm:text-5xl">
+          <h1
+            className={`text-4xl font-extrabold tracking-tight  sm:text-5xl ${
+              theme === "dark" ? "text-textPrimary" : "text-background"
+            }`}
+          >
             Education
           </h1>
         </div>
         {/* Subheader */}
-        <div className="text-textSecondary text-center max-w-[600px]">
-          <p className="text-lg mt-4 text-center text-textSecondary99 max-w-[600px] lg:text-base">
+        <div
+          className={`${
+            theme === "dark" ? "text-textSecondary" : "text-lighttextSecondary"
+          }  text-center max-w-[600px]`}
+        >
+          <p
+            className={`text-lg mt-4 text-center ${
+              theme === "dark"
+                ? "text-textSecondary"
+                : "text-lighttextSecondary"
+            }  max-w-[600px] lg:text-base`}
+          >
             My education has been a journey of self-discovery and growth. My
             educational details are as follows.
           </p>
@@ -52,7 +67,7 @@ const Index = () => {
                 <TimelineContent>
                   <div className="flex justify-start items-center w-full">
                     <div className="w-full max-w-[700px] p-4">
-                      <EducationCard education={edu} />
+                      <EducationCard education={edu} theme={theme} />
                     </div>
                   </div>
                 </TimelineContent>

@@ -1,16 +1,25 @@
 // import ProjectCard from "./ProjectCard";
 import ProjectCard from "./ProjectCard copy";
 import { projects } from "./pra";
+/*eslint-disable*/
 
-const Projects = () => (
+const Projects = ({ theme }) => (
   <div className="py-12 " id="projects">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Section Header */}
       <div className="text-center">
-        <h2 className="text-4xl font-extrabold tracking-tight text-textPrimary sm:text-5xl">
+        <h2
+          className={`text-4xl font-extrabold tracking-tight ${
+            theme === "dark" ? "text-textPrimary" : "text-background"
+          } sm:text-5xl`}
+        >
           Projects
         </h2>
-        <p className="mt-4 text-lg text-textSecondary">
+        <p
+          className={`mt-4 text-lg ${
+            theme === "dark" ? "text-textSecondary" : "text-lighttextSecondary"
+          }`}
+        >
           Here are some of my Projects.
         </p>
       </div>
@@ -20,9 +29,10 @@ const Projects = () => (
         <div className="flex flex-wrap justify-center gap-8">
           {projects.map((project, index) => (
             <ProjectCard
-              className="bg-cardBackground1 shadow-lg rounded-lg"
+              className="shadow-lg rounded-lg"
               key={index}
               project={project}
+              theme={theme}
             />
           ))}
         </div>
