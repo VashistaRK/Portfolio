@@ -5,7 +5,7 @@ Welcome to my personal portfolio website! 🎉 This website showcases my journey
 ---
 Here’s a sneak peek of the homepage of my portfolio:
 
-![Screenshot 2025-01-17 213116](https://github.com/user-attachments/assets/80bc67a6-35f6-4d3d-8a10-ca2432188adb)
+![[Screenshot 2025-01-17 213116](https://github.com/user-attachments/assets/80bc67a6-35f6-4d3d-8a10-ca2432188adb)](https://github.com/VashistaRK/Portfolio/blob/main/public/images/portfolio-logo.png)
 
 ---
 
