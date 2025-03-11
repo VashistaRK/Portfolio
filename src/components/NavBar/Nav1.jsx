@@ -36,6 +36,7 @@ const Navbar = ({ theme }) => {
         {/* Logo */}
         <Link
           to="/"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className={`text-[1.5rem] font-medium cursor-pointer no-underline ${
             theme === "dark" ? "text-textPrimary" : "text-lighttextPrimary"
           }`}
