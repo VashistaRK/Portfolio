@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Bytesized&family=Dancing+Script:wght@400..700&family=Goldman:wght@400;700&family=Orbitron:wght@400..900&family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik+Dirt&family=Syncopate:wght@400;700&family=Unica+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Urvis";
+  src: url("/src/assets/fonts/URVIS.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Jersey M54";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Jersey M54"),
+    url("https://fonts.cdnfonts.com/s/2139/Jersey M54.woff") format("woff");
+}
+@font-face {
+  font-family: "NEDAR";
+  src: url("/src/assets/fonts/NEDAR.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nexmod-Regular";
+  src: url("/src/assets/fonts/Nexmod-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Melorian";
+  src: url("/src/assets/fonts/Melorian.otf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Burnout Techniques";
+  src: url("/src/assets/fonts/Burnout Techniques.otf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@theme {
+  --font-urvis: "Urvis", sans-serif;
+  --font-NEDAR: "NEDAR", sans-serif;
+  --font-Nexmod-Regular: "Nexmod-Regular", sans-serif;
+  --font-Melorian: "Melorian", sans-serif;
+  --font-Burnout: "Burnout Techniques", sans-serif;
+  --font-jersey: "Jersey M54", "sans-serif";
+  --font-quick: "Quicksand", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-orbito: "Orbitron", sans-serif;
+  --font-synco: "Syncopate", sans-serif;
+  --font-unica: "Unica One", sans-serif;
+  --font-audio: "Audiowide", sans-serif;
+}
+@keyframes diagonal-flow {
+  0% {
+    transform: translate(-100%, 100%);
+  }
+  100% {
+    transform: translate(100%, -100%);
+  }
+}
+
+.animate-diagonal-flow {
+  animation: diagonal-flow linear infinite;
+}
